@@ -1,10 +1,13 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import classes from "./Books.module.css";
 import Card from "../components/items/Card";
 
 function Books(props) {
   const location = useLocation();
   const state = location.state;
+
+  //onClick={navigate("/", { state: "TestThrough" })
+  let navigate = useNavigate();
   //console.log(state);
 
   return (

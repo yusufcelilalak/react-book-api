@@ -1,7 +1,14 @@
+import { useLocation, useNavigate } from "react-router-dom";
 import classes from "./Card.module.css";
 
 function Card({ book }) {
   console.log(book);
+
+  const location = useLocation();
+  const state = location.state;
+
+  //onClick={navigate("/", { state: "TestThrough" })
+  let navigate = useNavigate();
 
   if (book) {
     return (
@@ -21,7 +28,10 @@ function Card({ book }) {
             : (categories = "Unknown");
 
           return (
-            <div className={classes.card}>
+            <div
+              className={classes.card}
+              onClick={() => navigate("/book-information", { state: item })}
+            >
               <img src={bookCover} alt="" />
               <div className={classes.container}>
                 <p>{categories}</p>

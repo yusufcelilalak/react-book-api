@@ -14,7 +14,10 @@ function SearchField() {
 
   useEffect(() => {
     console.log("Updated!");
-    navigate("/", { state: bookData });
+    if (bookData.length != 0) {
+      console.log("Not empty.");
+      navigate("/", { state: bookData });
+    }
   }, [bookData]);
 
   useEffect(() => {
@@ -54,7 +57,9 @@ function SearchField() {
           <input
             type="text"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
             onKeyDown={searchBook}
           ></input>
           <Link to="/" state={bookData}>

@@ -40,7 +40,8 @@
 }
 
 input,
-button {
+button,
+select {
   border-width: 0;
   border-radius: 2px;
   height: 2rem;
