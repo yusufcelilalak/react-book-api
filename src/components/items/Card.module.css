@@ -1,0 +1,19 @@
+.card {
+  background-color: rgb(182, 182, 182);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding-bottom: 10px;
+  border-radius: 3px;
+}
+
+.card img {
+  margin: 10px auto;
+  width: 90%;
+  height: 300px;
+  display: block;
+}
+
+p,
+h3 {
+  margin: 0 14px;
+}

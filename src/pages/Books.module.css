@@ -1,0 +1,9 @@
+.container {
+  width: 80%;
+  margin: 5vh auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 0.5fr));
+  justify-content: center;
+  gap: 80px 40px;
+  box-sizing: border-box;
+}
